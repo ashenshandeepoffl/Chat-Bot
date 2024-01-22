@@ -43,12 +43,12 @@ function sendMessage() {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
-        'X-RapidAPI-Key': 'b3e2793473mshc71482d29a6d2c6p1eed60jsn07b16e66bea4',
-        'X-RapidAPI-Host': 'chatgpt-42.p.rapidapi.com'
+        'X-RapidAPI-Key': '',
+        'X-RapidAPI-Host': ''
         },
         body: `{"messages":[{"role":"user","content":"${message}"}]}`
         };
-    fetch('https://chatgpt-42.p.rapidapi.com/conversationgpt4', options).then((response) => response.json()).then((response) => {
+    fetch('', options).then((response) => response.json()).then((response) => {
         appendMessage('bot', response.choices[0].message.content);
 
         buttonIcon.classList.add('fa-solid', 'fa-paper-plane');
